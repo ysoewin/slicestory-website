@@ -239,7 +239,7 @@ h3 {
 .menu-subhead {
   margin: 32px 0 16px;
   font-size: 26px;
-  color: var(--tomato);
+  color: var(--basil);
   letter-spacing: .02em;
 }
 .menu-subhead:first-of-type { margin-top: 8px; }
