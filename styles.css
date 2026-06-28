@@ -236,6 +236,14 @@ h3 {
 }
 .section-head p { max-width: 470px; margin: 0; line-height: 1.5; color: rgba(20,18,16,.72); }
 .dark .section-head p { color: rgba(255,248,239,.72); }
+.section-head.stacked {
+  display: block;
+}
+.section-head.stacked p {
+  max-width: 760px;
+  margin-top: 14px;
+  font-size: 18px;
+}
 .menu-subhead {
   display: inline-block;
   margin: 32px 0 16px;
