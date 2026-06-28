@@ -30,7 +30,8 @@ a { color: inherit; }
   background: var(--tomato);
   color: #fff;
   font-size: 13px;
-  font-weight: 900;
+  font-weight: 800;
+  letter-spacing: .02em;
   text-transform: uppercase;
   white-space: nowrap;
   overflow: hidden;
