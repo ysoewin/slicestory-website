@@ -283,44 +283,27 @@ h3 {
 .story-photo-panel {
   min-height: 800px;
 }
-.story-moment-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-  min-height: 520px;
-  margin: calc(-1 * clamp(44px, 7vw, 92px)) calc(-1 * clamp(18px, 5vw, 72px));
+.story-full-width {
+  max-width: 760px;
 }
-.story-moment-grid.reversed {
-  direction: rtl;
+.story-full-width h2 {
+  margin-bottom: 28px;
 }
-.story-moment-grid.reversed > * {
-  direction: ltr;
+.story-full-width p {
+  font-size: 19px;
+  line-height: 1.75;
+  color: rgba(20,18,16,.78);
+  margin-bottom: 20px;
 }
-.story-moment-text {
-  padding: clamp(44px, 6vw, 80px) clamp(28px, 5vw, 72px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.story-signature {
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 3px solid var(--ink);
 }
-.story-moment-text p { font-size: 18px; line-height: 1.7; }
-.story-moment-text strong { font-size: 18px; }
-.story-moment-image {
-  background-image: var(--story-image);
-  background-size: cover;
-  background-position: center;
-  min-height: 420px;
-}
-.section.dark .story-moment-text p { color: rgba(255,248,239,.82); }
-.section.dark .story-moment-text h2 { color: #fff8ef; }
-@media (max-width: 980px) {
-  .story-moment-grid,
-  .story-moment-grid.reversed {
-    grid-template-columns: 1fr;
-    direction: ltr;
-    margin: calc(-1 * clamp(44px, 7vw, 92px)) calc(-1 * clamp(18px, 5vw, 72px));
-  }
-  .story-moment-image { min-height: 300px; }
-  .story-moment-grid.reversed .story-moment-image { order: -1; }
+.story-signature strong {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 2px;
 }
 .copy p { max-width: 760px; font-size: 19px; line-height: 1.65; color: rgba(20,18,16,.78); }
 .dark .copy p { color: rgba(255,248,239,.78); }
