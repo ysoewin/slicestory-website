@@ -660,110 +660,6 @@ h3 {
   border-top: 4px solid var(--gold);
 }
 .footer strong { color: #fff8ef; text-transform: uppercase; }
-.edit-toolbar {
-  position: fixed;
-  right: 16px;
-  bottom: 16px;
-  z-index: 50;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 8px;
-  max-width: min(440px, calc(100vw - 32px));
-  padding: 10px;
-  background: rgba(255, 248, 239, .96);
-  border: 3px solid var(--ink);
-  box-shadow: 8px 8px 0 rgba(20, 18, 16, .36);
-}
-.edit-toolbar button {
-  min-height: 38px;
-  padding: 0 12px;
-  border: 2px solid var(--ink);
-  background: #fff8ef;
-  color: var(--ink);
-  font: inherit;
-  font-size: 13px;
-  font-weight: 900;
-  cursor: pointer;
-}
-.edit-toolbar button.primary {
-  background: var(--tomato);
-  color: #fff8ef;
-}
-.edit-note {
-  width: 100%;
-  margin: 0;
-  font-size: 12px;
-  font-weight: 800;
-  color: rgba(20, 18, 16, .68);
-}
-.editable-active [data-editable-text] {
-  outline: 2px dashed rgba(215, 51, 37, .72);
-  outline-offset: 4px;
-  cursor: text;
-}
-.editable-active [data-editable-text]:focus {
-  outline: 3px solid var(--tomato);
-  background: rgba(255, 248, 239, .92);
-}
-.image-edit-active [data-editable-image] {
-  outline: 3px dashed var(--gold);
-  outline-offset: 5px;
-  cursor: pointer;
-}
-.image-edit-active [data-editable-image]:hover {
-  outline-color: var(--tomato);
-}
-.image-panel {
-  position: fixed;
-  left: 50%;
-  bottom: 92px;
-  z-index: 60;
-  display: none;
-  width: min(560px, calc(100vw - 32px));
-  padding: 14px;
-  transform: translateX(-50%);
-  background: #fff8ef;
-  border: 3px solid var(--ink);
-  box-shadow: 10px 10px 0 rgba(20, 18, 16, .42);
-}
-.image-panel.open { display: grid; gap: 10px; }
-.image-panel label {
-  font-size: 13px;
-  font-weight: 900;
-  text-transform: uppercase;
-}
-.image-panel input[type="text"] {
-  width: 100%;
-  min-height: 44px;
-  padding: 0 12px;
-  border: 2px solid var(--ink);
-  background: #fff;
-  color: var(--ink);
-  font: inherit;
-}
-.image-panel-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.image-panel button,
-.image-panel .file-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 38px;
-  padding: 0 12px;
-  border: 2px solid var(--ink);
-  background: #fff8ef;
-  color: var(--ink);
-  font: inherit;
-  font-size: 13px;
-  font-weight: 900;
-  cursor: pointer;
-}
-.image-panel button.primary { background: var(--tomato); color: #fff8ef; }
-.image-panel small { color: rgba(20, 18, 16, .68); font-weight: 800; line-height: 1.35; }
 
 @media (max-width: 980px) {
   .nav { position: relative; align-items: flex-start; flex-direction: column; }
@@ -794,7 +690,8 @@ h3 {
 
 @media (max-width: 640px) {
   .top-strip { justify-content: flex-start; }
-  .nav-links a:not(.button) { display: none; }
+  .nav-links { gap: 14px; font-size: 13px; }
+  .nav-links .button { min-height: 38px; padding: 0 14px; }
   .hero { min-height: auto; }
   .schedule-truck-image { min-height: 260px; }
   .feature-card { transform: none; box-shadow: 10px 10px 0 var(--tomato); }
