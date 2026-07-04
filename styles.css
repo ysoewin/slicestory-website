@@ -314,6 +314,29 @@ h3 {
   border: 1px solid rgba(107,78,38,.5);
   pointer-events: none;
 }
+.vpc-corner {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  border-color: #6b4e26;
+  border-style: solid;
+  border-width: 0;
+  pointer-events: none;
+}
+.vpc-corner::after {
+  content: '\2766';
+  position: absolute;
+  font-size: 15px;
+  color: #6b4e26;
+}
+.vpc-corner-tl { top: 12px; left: 12px; border-top-width: 2px; border-left-width: 2px; }
+.vpc-corner-tl::after { top: 2px; left: 3px; }
+.vpc-corner-tr { top: 12px; right: 12px; border-top-width: 2px; border-right-width: 2px; }
+.vpc-corner-tr::after { top: 2px; right: 3px; transform: scaleX(-1); }
+.vpc-corner-bl { bottom: 12px; left: 12px; border-bottom-width: 2px; border-left-width: 2px; }
+.vpc-corner-bl::after { bottom: 2px; left: 3px; transform: scaleY(-1); }
+.vpc-corner-br { bottom: 12px; right: 12px; border-bottom-width: 2px; border-right-width: 2px; }
+.vpc-corner-br::after { bottom: 2px; right: 3px; transform: scale(-1,-1); }
 .vpc-crest {
   display: flex;
   align-items: center;
