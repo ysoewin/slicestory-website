@@ -284,116 +284,71 @@ h3 {
   min-height: 800px;
 }
 
-.postcard-section {
-  background: #e2d0b8;
-  padding: clamp(36px, 5vw, 72px) clamp(20px, 5vw, 72px);
+/* ===== VINTAGE POSTCARD ===== */
+.vpc-wrap {
+  background: #d6c9b0;
+  padding: clamp(40px, 6vw, 80px) clamp(24px, 6vw, 80px);
 }
-.postcard-card {
+.vpc-card {
+  background: #faf6ed;
+  border: 1px solid #c8b898;
+  box-shadow: 3px 3px 0 rgba(20,18,16,.15), 6px 6px 0 rgba(20,18,16,.08);
   width: 100%;
-  background: #fdf6e8;
-  border: 1px solid #c4a882;
-  border-bottom: 4px solid #141210;
-  box-shadow: 8px 8px 0 rgba(20,18,16,.2);
-  padding: 0;
-  overflow: hidden;
 }
-.postcard-airmail-stripe {
-  height: 12px;
-  background: repeating-linear-gradient(
-    -45deg,
-    #d73325 0px, #d73325 10px,
-    #fff8ef 10px, #fff8ef 20px,
-    #1a4f9c 20px, #1a4f9c 30px,
-    #fff8ef 30px, #fff8ef 40px
-  );
-}
-.postcard-inner-padding {
-  padding: 44px 56px 0;
-  background-image: repeating-linear-gradient(transparent, transparent 35px, rgba(196,168,130,.22) 35px, rgba(196,168,130,.22) 36px);
-  background-position: 0 120px;
-}
-.postcard-top-rule {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 28px;
-}
-.postcard-rule-line { flex: 1; height: 1px; background: #c4a882; }
-.postcard-rule-label {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-style: italic;
-  font-size: 13px;
-  color: #a08060;
-  white-space: nowrap;
-  letter-spacing: .04em;
-}
-.postcard-header {
+.vpc-top {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 32px;
-  margin-bottom: 0;
+  padding: 28px 40px 20px;
+  border-bottom: 1px solid #c8b898;
 }
-.postcard-header-text { flex: 1; }
-.postcard-section h2.postcard-heading {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: clamp(28px, 3.8vw, 52px);
-  font-weight: 700;
-  line-height: 1.18;
-  text-transform: none;
-  letter-spacing: -.01em;
-  color: #2c1f0e;
-  margin: 0 0 14px;
-}
-.postcard-accent-bar {
-  display: flex;
-  gap: 3px;
-  margin-bottom: 28px;
-}
-.postcard-accent-bar::before {
-  content: '';
-  display: block;
-  width: 40px;
-  height: 3px;
-  background: #d73325;
-}
-.postcard-accent-bar::after {
-  content: '';
-  display: block;
-  width: 12px;
-  height: 3px;
-  background: #f4b63e;
-}
-.postcard-stamps-cluster {
+.vpc-top-left {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  gap: 8px;
-  flex-shrink: 0;
+  gap: 4px;
 }
-.postcard-stamp-box {
-  width: 76px;
-  height: 90px;
-  border: 1.5px solid #c4a882;
-  background: #fff9ee;
+.vpc-postcard-label {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(22px, 3vw, 36px);
+  font-weight: 700;
+  letter-spacing: .12em;
+  color: #2c1a06;
+}
+.vpc-postcard-sub {
+  font-family: Inter, sans-serif;
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #9a8060;
+}
+.vpc-top-right {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  position: relative;
+}
+.vpc-stamp {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.vpc-stamp-inner {
+  width: 72px;
+  height: 86px;
+  border: 1.5px solid #c8a050;
+  background: #fff8e8;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 5px;
+  box-shadow: inset 0 0 0 3px #faf6ed, inset 0 0 0 4px #c8a050;
   position: relative;
+  z-index: 2;
 }
-.postcard-stamp-box::before,
-.postcard-stamp-box::after {
-  content: '';
-  position: absolute;
-  top: -4px; bottom: -4px; left: -4px; right: -4px;
-  border: 1px dashed #c4a882;
-  pointer-events: none;
-}
-.postcard-stamp-logo {
-  width: 44px;
-  height: 44px;
+.vpc-stamp-logo {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background: #141210;
   display: flex;
@@ -401,115 +356,123 @@ h3 {
   justify-content: center;
   color: #f4b63e;
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   border: 2px solid #fff8ef;
-  box-shadow: 3px 3px 0 #d73325;
+  box-shadow: 2px 2px 0 #d73325;
 }
-.postcard-stamp-city {
+.vpc-stamp-value {
   font-family: Inter, sans-serif;
-  font-size: 9px;
-  letter-spacing: .16em;
+  font-size: 8px;
+  letter-spacing: .18em;
   text-transform: uppercase;
-  color: #a08060;
+  color: #8b6914;
 }
-.postcard-stamp-small {
-  width: 48px;
-  height: 56px;
-  border: 1.5px solid #c4a882;
-  background: #fff0d0;
+.vpc-postmark {
+  position: absolute;
+  top: -6px;
+  right: -48px;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  border: 2px solid #6b3020;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 3px;
+  transform: rotate(-12deg);
+  opacity: .5;
+  z-index: 3;
+}
+.vpc-postmark span {
   font-family: Inter, sans-serif;
-  font-size: 7px;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: #a08060;
-}
-.postcard-stamp-small svg {
-  width: 22px;
-  height: 22px;
-  fill: none;
-  stroke: #a08060;
-  stroke-width: 1.5;
-}
-.postcard-body p {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 17px;
-  line-height: 36px;
-  color: #3d2a14;
-  margin: 0;
-}
-.postcard-signature-row {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  margin-top: 32px;
-  padding: 22px 56px 32px;
-  border-top: 1px dashed #c4a882;
-  background: #fdf0d8;
-}
-.postcard-sig-left {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-.postcard-sig-greeting {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-style: italic;
-  font-size: 14px;
-  color: #6b4c2a;
-}
-.postcard-sig-name {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 26px;
-  font-weight: 700;
-  color: #2c1f0e;
-  display: block;
-}
-.postcard-sig-title {
-  font-family: Inter, sans-serif;
-  font-size: 11px;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: #a08060;
-}
-.postcard-postmark {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  border: 2.5px solid #d73325;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  transform: rotate(-10deg);
-  opacity: .55;
-}
-.postcard-postmark-city, .postcard-postmark-year {
-  font-family: Inter, sans-serif;
-  font-size: 9px;
+  font-size: 8px;
   font-weight: 800;
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: #d73325;
+  color: #6b3020;
 }
-.postcard-postmark-line { width: 60px; height: 1.5px; background: #d73325; }
-.postcard-color-bar {
+.vpc-pm-line {
+  width: 54px;
+  height: 1.5px;
+  background: #6b3020;
+}
+.vpc-divider {
+  height: 1px;
+  background: #c8b898;
+  margin: 0 40px;
+}
+.vpc-letter {
+  padding: 36px 40px 44px;
+}
+.vpc-date {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 14px;
+  color: #9a8060;
+  margin: 0 0 20px;
+}
+.vpc-wrap .vpc-heading {
+  font-family: 'Caveat', cursive !important;
+  font-size: clamp(32px, 4.5vw, 60px) !important;
+  font-weight: 700 !important;
+  line-height: 1.1 !important;
+  text-transform: none !important;
+  letter-spacing: .01em !important;
+  color: #2c1a06 !important;
+  margin: 0 0 28px !important;
+  max-width: 100% !important;
+  border-bottom: 2px solid rgba(180,140,80,.3);
+  padding-bottom: 24px;
+}
+.vpc-body {
+  columns: 2;
+  column-gap: 52px;
+  column-rule: 1px solid rgba(180,150,100,.3);
+  margin-bottom: 36px;
+}
+.vpc-body p {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 17px;
+  line-height: 1.85;
+  color: #3d2a14;
+  margin: 0 0 20px;
+  break-inside: avoid;
+}
+.vpc-sig {
   display: flex;
-  height: 6px;
+  flex-direction: column;
+  gap: 3px;
+  border-top: 1px dashed #c8b898;
+  padding-top: 24px;
 }
-.postcard-bar-red { flex: 3; background: #d73325; }
-.postcard-bar-gold { flex: 2; background: #f4b63e; }
-.postcard-bar-basil { flex: 2; background: #24734f; }
-@media (max-width: 640px) {
-  .postcard-inner-padding { padding: 28px 24px 0; }
-  .postcard-stamp-small { display: none; }
-  .postcard-signature-row { padding: 20px 24px 24px; }
+.vpc-sig-warm {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 15px;
+  color: #6b4c1a;
+}
+.vpc-sig-name {
+  font-family: 'Caveat', cursive;
+  font-size: 42px;
+  font-weight: 700;
+  color: #2c1a06;
+  line-height: 1;
+}
+.vpc-sig-title {
+  font-family: Inter, sans-serif;
+  font-size: 11px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #9a8060;
+  margin-top: 4px;
+}
+@media (max-width: 980px) {
+  .vpc-body { columns: 1; }
+  .vpc-top { padding: 20px 24px 16px; }
+  .vpc-letter { padding: 24px 24px 32px; }
+  .vpc-divider { margin: 0 24px; }
 }
 .copy p { max-width: 760px; font-size: 19px; line-height: 1.65; color: rgba(20,18,16,.78); }
 .dark .copy p { color: rgba(255,248,239,.78); }
