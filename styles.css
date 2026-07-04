@@ -284,66 +284,126 @@ h3 {
   min-height: 800px;
 }
 
-/* ===== VINTAGE POSTCARD ===== */
+/* ===== VINTAGE COLONIAL LETTER ===== */
 .vpc-wrap {
-  background: #d6c9b0;
-  padding: clamp(32px, 4vw, 56px) clamp(20px, 4vw, 56px);
+  background: #cbbb9e;
+  padding: clamp(28px, 4vw, 52px) clamp(18px, 4vw, 52px);
 }
 .vpc-card {
-  background: #faf6ed;
-  border: 1px solid #c8b898;
-  box-shadow: 3px 3px 0 rgba(20,18,16,.15), 6px 6px 0 rgba(20,18,16,.08);
-  width: 100%;
+  background: #f7efdd;
+  border: 1px solid #9a7f52;
+  box-shadow: 0 2px 0 #9a7f52, 0 8px 24px rgba(60,40,10,.25);
+  padding: 10px;
 }
-.vpc-top {
+.vpc-frame {
+  border: 2px solid #8b6914;
+  outline: 1px solid #8b6914;
+  outline-offset: 3px;
+  padding: 36px clamp(28px, 4.5vw, 64px) 40px;
+  position: relative;
+}
+.vpc-crest {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+.vpc-crest-rule {
+  flex: 1;
+  height: 1px;
+  background: #a8895a;
+  position: relative;
+}
+.vpc-rule-diamond {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 7px;
+  height: 7px;
+  background: #8b6914;
+}
+.vpc-crest-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+.vpc-crest-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #141210;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f4b63e;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 24px;
+  font-weight: 700;
+  border: 2px solid #f7efdd;
+  box-shadow: 0 0 0 2px #8b6914;
+}
+.vpc-crest-name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: #2c1a06;
+}
+.vpc-crest-est {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 12px;
+  letter-spacing: .1em;
+  color: #8b6914;
+}
+.vpc-head-row {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 28px 52px 22px;
-  border-bottom: 1px solid #c8b898;
+  gap: 36px;
+  margin-bottom: 8px;
 }
-.vpc-top-left {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-.vpc-postcard-label {
+.vpc-head-text { flex: 1; }
+.vpc-date {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: clamp(22px, 2.5vw, 32px);
-  font-weight: 700;
-  letter-spacing: .14em;
-  color: #2c1a06;
+  font-style: italic;
+  font-size: 14px;
+  color: #9a7f52;
+  margin: 0 0 12px;
 }
-.vpc-postcard-sub {
-  font-family: Inter, sans-serif;
-  font-size: 10px;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: #9a8060;
+.vpc-wrap .vpc-heading {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: clamp(26px, 3.2vw, 42px) !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  color: #2c1a06 !important;
+  margin: 0 !important;
+  max-width: 100% !important;
 }
-.vpc-top-right {
+.vpc-stamp-cluster {
   display: flex;
   align-items: flex-start;
-  gap: 16px;
-  padding-right: 8px;
-}
-.vpc-stamp {
-  position: relative;
-  width: 72px;
+  gap: 14px;
+  flex-shrink: 0;
+  padding-top: 4px;
 }
 .vpc-stamp-inner {
-  width: 72px;
-  height: 86px;
-  border: 1.5px solid #c8a050;
-  background: #fff8e8;
+  width: 74px;
+  height: 88px;
+  border: 1.5px solid #a8895a;
+  background: #fdf6e2;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 5px;
-  box-shadow: inset 0 0 0 3px #faf6ed, inset 0 0 0 4px #c8a050;
-  position: relative;
-  z-index: 2;
+  gap: 6px;
+  box-shadow: inset 0 0 0 3px #f7efdd, inset 0 0 0 4px #a8895a;
 }
 .vpc-stamp-logo {
   width: 40px;
@@ -357,19 +417,19 @@ h3 {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 18px;
   font-weight: 700;
-  border: 2px solid #fff8ef;
-  box-shadow: 2px 2px 0 #d73325;
+  border: 2px solid #fdf6e2;
+  box-shadow: 2px 2px 0 #b03020;
 }
 .vpc-stamp-value {
-  font-family: Inter, sans-serif;
-  font-size: 8px;
-  letter-spacing: .18em;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 9px;
+  letter-spacing: .16em;
   text-transform: uppercase;
   color: #8b6914;
 }
 .vpc-postmark {
-  width: 80px;
-  height: 80px;
+  width: 82px;
+  height: 82px;
   border-radius: 50%;
   border: 2px solid #6b3020;
   display: flex;
@@ -377,107 +437,151 @@ h3 {
   align-items: center;
   justify-content: center;
   gap: 3px;
-  transform: rotate(-12deg);
-  opacity: .45;
-  margin-top: 4px;
-  flex-shrink: 0;
+  transform: rotate(-10deg);
+  opacity: .5;
+  margin-top: 2px;
 }
 .vpc-postmark span {
-  font-family: Inter, sans-serif;
-  font-size: 8px;
-  font-weight: 800;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 9px;
+  font-weight: 700;
   letter-spacing: .14em;
   text-transform: uppercase;
   color: #6b3020;
 }
 .vpc-pm-line {
   width: 50px;
-  height: 1.5px;
+  height: 1px;
   background: #6b3020;
 }
-.vpc-divider {
+.vpc-flourish {
+  text-align: center;
+  margin: 20px 0 26px;
+  position: relative;
+}
+.vpc-flourish::before,
+.vpc-flourish::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: calc(50% - 30px);
   height: 1px;
-  background: #c8b898;
+  background: #c8ae82;
 }
-.vpc-letter {
-  padding: 36px 52px 48px;
-}
-.vpc-date {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-style: italic;
-  font-size: 14px;
-  color: #9a8060;
-  margin: 0 0 16px;
-}
-.vpc-wrap .vpc-heading {
-  font-family: 'Caveat', cursive !important;
-  font-size: clamp(28px, 3.8vw, 52px) !important;
-  font-weight: 700 !important;
-  line-height: 1.15 !important;
-  text-transform: none !important;
-  letter-spacing: .01em !important;
-  color: #2c1a06 !important;
-  margin: 0 0 24px !important;
-  max-width: 100% !important;
-  border-bottom: 1px solid rgba(180,140,80,.3);
-  padding-bottom: 24px;
+.vpc-flourish::before { left: 0; }
+.vpc-flourish::after { right: 0; }
+.vpc-flourish span {
+  font-size: 16px;
+  color: #8b6914;
 }
 .vpc-body {
   display: grid;
   grid-template-columns: 1fr 1px 1fr;
-  gap: 0 48px;
-  margin-bottom: 32px;
+  gap: 0 44px;
+  margin-bottom: 30px;
 }
 .vpc-body-col {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 16px;
 }
 .vpc-body-divider {
-  background: rgba(180,150,100,.3);
+  background: #d4bd93;
   width: 1px;
 }
 .vpc-body p {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 16.5px;
-  line-height: 1.85;
-  color: #3d2a14;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #3a2810;
   margin: 0;
+  text-align: justify;
+}
+.vpc-dropcap {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 52px;
+  font-weight: 700;
+  float: left;
+  line-height: .82;
+  margin: 4px 8px 0 0;
+  color: #8b2020;
+}
+.vpc-foot-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-top: 1px solid #d4bd93;
+  padding-top: 22px;
 }
 .vpc-sig {
   display: flex;
   flex-direction: column;
-  gap: 3px;
-  border-top: 1px dashed #c8b898;
-  padding-top: 22px;
-  max-width: 320px;
+  gap: 2px;
 }
 .vpc-sig-warm {
   font-family: 'Playfair Display', Georgia, serif;
   font-style: italic;
-  font-size: 15px;
+  font-size: 14px;
   color: #6b4c1a;
 }
 .vpc-sig-name {
   font-family: 'Caveat', cursive;
-  font-size: 46px;
+  font-size: 44px;
   font-weight: 700;
   color: #2c1a06;
   line-height: 1;
 }
 .vpc-sig-title {
-  font-family: Inter, sans-serif;
-  font-size: 10px;
-  letter-spacing: .14em;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 11px;
+  letter-spacing: .18em;
   text-transform: uppercase;
-  color: #9a8060;
+  color: #9a7f52;
   margin-top: 4px;
 }
+.vpc-seal {
+  flex-shrink: 0;
+}
+.vpc-seal-ring {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 2px double #8b2020;
+  box-shadow: 0 0 0 3px #f7efdd, 0 0 0 4px #8b2020;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  background: #fdf6e2;
+  transform: rotate(6deg);
+}
+.vpc-seal-word {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #8b2020;
+  max-width: 70px;
+  text-align: center;
+  line-height: 1.4;
+}
+.vpc-seal-core {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #8b2020;
+  line-height: 1;
+}
 @media (max-width: 980px) {
+  .vpc-frame { padding: 24px 20px 28px; }
   .vpc-body { grid-template-columns: 1fr; }
   .vpc-body-divider { display: none; }
-  .vpc-top { padding: 20px 24px 16px; }
-  .vpc-letter { padding: 24px 24px 32px; }
+  .vpc-head-row { flex-direction: column; gap: 20px; }
+  .vpc-stamp-cluster { align-self: flex-end; }
+  .vpc-crest { gap: 12px; }
+  .vpc-crest-name { font-size: 14px; letter-spacing: .14em; }
 }
 .copy p { max-width: 760px; font-size: 19px; line-height: 1.65; color: rgba(20,18,16,.78); }
 .dark .copy p { color: rgba(255,248,239,.78); }
