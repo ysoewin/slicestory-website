@@ -287,7 +287,7 @@ h3 {
 /* ===== VINTAGE POSTCARD ===== */
 .vpc-wrap {
   background: #d6c9b0;
-  padding: clamp(40px, 6vw, 80px) clamp(24px, 6vw, 80px);
+  padding: clamp(32px, 4vw, 56px) clamp(20px, 4vw, 56px);
 }
 .vpc-card {
   background: #faf6ed;
@@ -299,38 +299,37 @@ h3 {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 28px 40px 20px;
+  padding: 28px 52px 22px;
   border-bottom: 1px solid #c8b898;
 }
 .vpc-top-left {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 5px;
 }
 .vpc-postcard-label {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: clamp(22px, 3vw, 36px);
+  font-size: clamp(22px, 2.5vw, 32px);
   font-weight: 700;
-  letter-spacing: .12em;
+  letter-spacing: .14em;
   color: #2c1a06;
 }
 .vpc-postcard-sub {
   font-family: Inter, sans-serif;
-  font-size: 11px;
-  letter-spacing: .1em;
+  font-size: 10px;
+  letter-spacing: .12em;
   text-transform: uppercase;
   color: #9a8060;
 }
 .vpc-top-right {
   display: flex;
   align-items: flex-start;
-  gap: 0;
-  position: relative;
+  gap: 16px;
+  padding-right: 8px;
 }
 .vpc-stamp {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
+  position: relative;
+  width: 72px;
 }
 .vpc-stamp-inner {
   width: 72px;
@@ -369,11 +368,8 @@ h3 {
   color: #8b6914;
 }
 .vpc-postmark {
-  position: absolute;
-  top: -6px;
-  right: -48px;
-  width: 88px;
-  height: 88px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   border: 2px solid #6b3020;
   display: flex;
@@ -382,8 +378,9 @@ h3 {
   justify-content: center;
   gap: 3px;
   transform: rotate(-12deg);
-  opacity: .5;
-  z-index: 3;
+  opacity: .45;
+  margin-top: 4px;
+  flex-shrink: 0;
 }
 .vpc-postmark span {
   font-family: Inter, sans-serif;
@@ -394,58 +391,66 @@ h3 {
   color: #6b3020;
 }
 .vpc-pm-line {
-  width: 54px;
+  width: 50px;
   height: 1.5px;
   background: #6b3020;
 }
 .vpc-divider {
   height: 1px;
   background: #c8b898;
-  margin: 0 40px;
 }
 .vpc-letter {
-  padding: 36px 40px 44px;
+  padding: 36px 52px 48px;
 }
 .vpc-date {
   font-family: 'Playfair Display', Georgia, serif;
   font-style: italic;
   font-size: 14px;
   color: #9a8060;
-  margin: 0 0 20px;
+  margin: 0 0 16px;
 }
 .vpc-wrap .vpc-heading {
   font-family: 'Caveat', cursive !important;
-  font-size: clamp(32px, 4.5vw, 60px) !important;
+  font-size: clamp(28px, 3.8vw, 52px) !important;
   font-weight: 700 !important;
-  line-height: 1.1 !important;
+  line-height: 1.15 !important;
   text-transform: none !important;
   letter-spacing: .01em !important;
   color: #2c1a06 !important;
-  margin: 0 0 28px !important;
+  margin: 0 0 24px !important;
   max-width: 100% !important;
-  border-bottom: 2px solid rgba(180,140,80,.3);
+  border-bottom: 1px solid rgba(180,140,80,.3);
   padding-bottom: 24px;
 }
 .vpc-body {
-  columns: 2;
-  column-gap: 52px;
-  column-rule: 1px solid rgba(180,150,100,.3);
-  margin-bottom: 36px;
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 0 48px;
+  margin-bottom: 32px;
+}
+.vpc-body-col {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.vpc-body-divider {
+  background: rgba(180,150,100,.3);
+  width: 1px;
 }
 .vpc-body p {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 17px;
+  font-size: 16.5px;
   line-height: 1.85;
   color: #3d2a14;
-  margin: 0 0 20px;
-  break-inside: avoid;
+  margin: 0;
 }
 .vpc-sig {
   display: flex;
   flex-direction: column;
   gap: 3px;
   border-top: 1px dashed #c8b898;
-  padding-top: 24px;
+  padding-top: 22px;
+  max-width: 320px;
 }
 .vpc-sig-warm {
   font-family: 'Playfair Display', Georgia, serif;
@@ -455,24 +460,24 @@ h3 {
 }
 .vpc-sig-name {
   font-family: 'Caveat', cursive;
-  font-size: 42px;
+  font-size: 46px;
   font-weight: 700;
   color: #2c1a06;
   line-height: 1;
 }
 .vpc-sig-title {
   font-family: Inter, sans-serif;
-  font-size: 11px;
-  letter-spacing: .12em;
+  font-size: 10px;
+  letter-spacing: .14em;
   text-transform: uppercase;
   color: #9a8060;
   margin-top: 4px;
 }
 @media (max-width: 980px) {
-  .vpc-body { columns: 1; }
+  .vpc-body { grid-template-columns: 1fr; }
+  .vpc-body-divider { display: none; }
   .vpc-top { padding: 20px 24px 16px; }
   .vpc-letter { padding: 24px 24px 32px; }
-  .vpc-divider { margin: 0 24px; }
 }
 .copy p { max-width: 760px; font-size: 19px; line-height: 1.65; color: rgba(20,18,16,.78); }
 .dark .copy p { color: rgba(255,248,239,.78); }
