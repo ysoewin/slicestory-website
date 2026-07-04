@@ -283,27 +283,84 @@ h3 {
 .story-photo-panel {
   min-height: 800px;
 }
-.story-full-width {
-  max-width: 760px;
+
+/* Postcard section */
+.postcard-section {
+  background: #f5ede0;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(20,18,16,.04) 27px, rgba(20,18,16,.04) 28px),
+    repeating-linear-gradient(90deg, transparent, transparent 27px, rgba(20,18,16,.03) 27px, rgba(20,18,16,.03) 28px);
 }
-.story-full-width h2 {
+.postcard-inner {
+  max-width: 780px;
+  padding: 48px 52px;
+  background: #fffaf3;
+  border: 2px solid rgba(20,18,16,.18);
+  box-shadow: 6px 6px 0 rgba(20,18,16,.12), 0 0 0 8px #f5ede0, 0 0 0 10px rgba(20,18,16,.12);
+  position: relative;
+}
+.postcard-stamp {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  padding: 8px 14px;
+  border: 2px solid var(--tomato);
+  color: var(--tomato);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  transform: rotate(3deg);
+  opacity: .72;
+}
+.postcard-eyebrow {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: .06em;
+  text-transform: none;
+  color: rgba(20,18,16,.5);
+  margin-bottom: 12px;
+}
+.postcard-heading {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: clamp(32px, 4.5vw, 56px) !important;
+  font-weight: 700;
+  line-height: 1.12 !important;
+  text-transform: none !important;
+  letter-spacing: -.01em;
+  color: var(--ink);
+  margin-bottom: 24px;
+}
+.postcard-divider {
+  width: 60px;
+  height: 3px;
+  background: var(--tomato);
   margin-bottom: 28px;
 }
+
+/* Story text inside postcard */
 .story-full-width p {
-  font-size: 19px;
-  line-height: 1.75;
-  color: rgba(20,18,16,.78);
-  margin-bottom: 20px;
+  font-size: 17px;
+  line-height: 1.78;
+  color: rgba(20,18,16,.80);
+  margin-bottom: 18px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 400;
 }
 .story-signature {
-  margin-top: 36px;
-  padding-top: 28px;
-  border-top: 3px solid var(--ink);
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(20,18,16,.2);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
 }
 .story-signature strong {
-  font-size: 18px;
+  font-size: 17px;
   display: block;
   margin-bottom: 2px;
+  font-style: normal;
 }
 .copy p { max-width: 760px; font-size: 19px; line-height: 1.65; color: rgba(20,18,16,.78); }
 .dark .copy p { color: rgba(255,248,239,.78); }
