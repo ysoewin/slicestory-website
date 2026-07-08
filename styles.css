@@ -47,8 +47,8 @@ a { color: inherit; }
   gap: 18px;
   min-height: 78px;
   padding: 14px clamp(18px, 5vw, 72px);
-  background: var(--gold);
-  border-bottom: 4px solid var(--ink);
+  background: var(--paper);
+  border-bottom: 4px solid var(--gold);
 }
 .logo {
   display: flex;
@@ -206,7 +206,7 @@ h3 {
 .feature-card p { color: rgba(20,18,16,.74); line-height: 1.45; }
 .section { padding: clamp(44px, 7vw, 92px) clamp(18px, 5vw, 72px); }
 .section.dark { background: var(--ink); color: #fff8ef; }
-.section.gold { background: var(--gold); border-top: 4px solid var(--ink); border-bottom: 4px solid var(--ink); }
+.section.gold { background: #faedd0; border-top: 4px solid var(--gold); border-bottom: 4px solid var(--gold); }
 .section.ingredient-story {
   background:
     linear-gradient(90deg, rgba(20,18,16,.96), rgba(20,18,16,.82), rgba(20,18,16,.48)),
