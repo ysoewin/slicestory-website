@@ -1,0 +1,43 @@
+/* ============================================================
+   SLICE STORY — MOTION & DIVIDERS (append to styles.css)
+   Wavy section dividers, scroll-reveal, drifting clouds.
+   Safe to add: nothing above is modified.
+   ============================================================ */
+
+/* --- Wavy divider ---------------------------------------- */
+/* Wrap a divider in any section. It sits flush at the top or
+   bottom edge and fills the width. Colour is set per-instance
+   via --wave-fill so the wave matches the NEXT section's bg. */
+.wave {
+  display: block;
+  width: 100%;
+  line-height: 0;
+}
+.wave svg { display: block; width: 100%; height: clamp(32px, 5vw, 64px); }
+.wave path { fill: var(--wave-fill, var(--cream)); }
+
+/* --- Scroll reveal --------------------------------------- */
+/* Add class="reveal" to any element you want to animate in.
+   Optional inline style="--reveal-delay:.08s" staggers items. */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity .6s ease, transform .6s ease;
+  transition-delay: var(--reveal-delay, 0s);
+  will-change: opacity, transform;
+}
+.reveal.in { opacity: 1; transform: none; }
+
+/* --- Drifting clouds (decorative hero art) --------------- */
+.cloud { position: absolute; pointer-events: none; }
+.cloud.c1 { animation: ss-drift1 26s ease-in-out infinite; }
+.cloud.c2 { animation: ss-drift2 32s ease-in-out infinite; }
+
+@keyframes ss-drift1 { 0%,100% { transform: translateX(0); } 50% { transform: translateX(24px); } }
+@keyframes ss-drift2 { 0%,100% { transform: translateX(0); } 50% { transform: translateX(-20px); } }
+
+/* --- Respect reduced-motion (accessibility) -------------- */
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .cloud { animation: none; }
+}
