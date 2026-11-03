@@ -9,25 +9,27 @@
   text-transform: none;
   letter-spacing: -.01em;
   max-width: none;
+  text-wrap: balance;
 }
 .ss p { font-size: 18px; line-height: 1.8; margin: 0 0 22px; color: #3a3126; }
 .ss strong { color: #1e1a12; font-weight: 700; }
 
 /* --- Intro split ----------------------------------------- */
-.ss-intro { display: grid; grid-template-columns: 1fr 1fr; min-height: 580px; }
-.ss-intro-text {
-  display: flex; flex-direction: column; justify-content: center;
-  padding: clamp(48px, 7vw, 104px) clamp(24px, 5vw, 80px);
+.ss-intro {
+  display: grid; grid-template-columns: 1fr 1.12fr; align-items: center;
+  gap: clamp(36px, 5vw, 80px); max-width: 1320px; margin: 0 auto;
+  padding: clamp(48px, 6vw, 92px) clamp(24px, 5vw, 72px) clamp(16px, 2.5vw, 32px);
 }
-.ss-mark { display: block; width: 58px; height: 58px; margin-bottom: 28px; }
+.ss-intro-text { display: flex; flex-direction: column; justify-content: center; }
+.ss-mark { display: block; width: 58px; height: 58px; margin-bottom: 24px; }
 .ss .ss-eyebrow {
   font-family: Inter, sans-serif; font-size: 12px; font-weight: 800;
   letter-spacing: .18em; text-transform: uppercase; color: var(--tomato);
   margin: 0 0 16px;
 }
 .ss .ss-title {
-  font-size: clamp(42px, 5.6vw, 78px); font-weight: 700; line-height: 1.04;
-  color: #c0392b; margin: 0 0 26px;
+  font-size: clamp(40px, 4.7vw, 66px); font-weight: 700; line-height: 1.06;
+  color: #c0392b; margin: 0 0 22px;
 }
 .ss .ss-intro-lead {
   font-family: 'Playfair Display', Georgia, serif; font-style: italic;
@@ -38,7 +40,12 @@
   font-family: Inter, sans-serif; font-size: 12px; font-weight: 700;
   letter-spacing: .16em; text-transform: uppercase; color: #9a8f78;
 }
-.ss-intro-img { background: var(--ss-img) center / cover no-repeat; min-height: 420px; }
+.ss-intro-img {
+  aspect-ratio: 3 / 2;
+  background: var(--ss-img) center / cover no-repeat;
+  border: 3px solid var(--ink);
+  box-shadow: 14px 14px 0 var(--tomato);
+}
 
 /* --- Chapters -------------------------------------------- */
 .ss-chapter {
@@ -143,7 +150,8 @@
 /* --- Mobile ---------------------------------------------- */
 @media (max-width: 860px) {
   .ss-intro, .ss-craft, .ss-give-inner { grid-template-columns: 1fr; }
-  .ss-intro-img { order: -1; min-height: 300px; }
+  .ss-intro { gap: 32px; padding-top: 32px; }
+  .ss-intro-img { order: -1; margin-right: 10px; box-shadow: 10px 10px 0 var(--tomato); }
   .ss-craft-img { min-height: 320px; }
   .ss-give-inner { text-align: center; }
   .ss p { font-size: 17px; }
