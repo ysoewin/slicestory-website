@@ -1,0 +1,150 @@
+/* ============================================================
+   SLICE STORY: "The Story Behind Slice Story" page
+   Loaded only by story-impact.html, after styles.css.
+   ============================================================ */
+
+.ss { background: #f4f1e8; color: #2a231b; font-variant-numeric: lining-nums; }
+.ss h2, .ss h3, .ss blockquote {
+  font-family: 'Playfair Display', Georgia, serif;
+  text-transform: none;
+  letter-spacing: -.01em;
+  max-width: none;
+}
+.ss p { font-size: 18px; line-height: 1.8; margin: 0 0 22px; color: #3a3126; }
+.ss strong { color: #1e1a12; font-weight: 700; }
+
+/* --- Intro split ----------------------------------------- */
+.ss-intro { display: grid; grid-template-columns: 1fr 1fr; min-height: 580px; }
+.ss-intro-text {
+  display: flex; flex-direction: column; justify-content: center;
+  padding: clamp(48px, 7vw, 104px) clamp(24px, 5vw, 80px);
+}
+.ss-mark { display: block; width: 58px; height: 58px; margin-bottom: 28px; }
+.ss .ss-eyebrow {
+  font-family: Inter, sans-serif; font-size: 12px; font-weight: 800;
+  letter-spacing: .18em; text-transform: uppercase; color: var(--tomato);
+  margin: 0 0 16px;
+}
+.ss .ss-title {
+  font-size: clamp(42px, 5.6vw, 78px); font-weight: 700; line-height: 1.04;
+  color: #c0392b; margin: 0 0 26px;
+}
+.ss .ss-intro-lead {
+  font-family: 'Playfair Display', Georgia, serif; font-style: italic;
+  font-size: clamp(20px, 1.9vw, 24px); line-height: 1.5; color: #1e1a12;
+  max-width: 470px; margin: 0 0 30px;
+}
+.ss-byline {
+  font-family: Inter, sans-serif; font-size: 12px; font-weight: 700;
+  letter-spacing: .16em; text-transform: uppercase; color: #9a8f78;
+}
+.ss-intro-img { background: var(--ss-img) center / cover no-repeat; min-height: 420px; }
+
+/* --- Chapters -------------------------------------------- */
+.ss-chapter {
+  max-width: 760px; margin: 0 auto;
+  padding: clamp(56px, 7vw, 96px) clamp(24px, 5vw, 40px) 8px;
+}
+.ss .ss-label {
+  display: flex; align-items: center; gap: 14px; margin: 0 0 30px;
+  font-family: Inter, sans-serif; font-size: 12px; font-weight: 800;
+  letter-spacing: .18em; text-transform: uppercase; color: #9a8f78;
+}
+.ss-label b {
+  font-family: 'Playfair Display', Georgia, serif; font-size: 30px; font-weight: 700;
+  letter-spacing: 0; color: var(--tomato);
+}
+.ss-label::after { content: ''; flex: 1; height: 1px; background: #d8cfb8; }
+.ss .ss-dropcap::first-letter {
+  font-family: 'Playfair Display', Georgia, serif; font-size: 64px; font-weight: 700;
+  float: left; line-height: .8; margin: 8px 12px 0 0; color: #c0392b;
+}
+
+/* --- Pull quote (turning point) -------------------------- */
+.ss-pull {
+  max-width: 980px; margin: clamp(32px, 5vw, 56px) auto 0;
+  padding: clamp(44px, 6vw, 76px) clamp(24px, 5vw, 48px);
+  text-align: center;
+  border-top: 2px solid #d8cfb8; border-bottom: 2px solid #d8cfb8;
+}
+.ss .ss-pull blockquote {
+  margin: 0 0 22px; font-size: clamp(32px, 4.4vw, 56px); font-weight: 700;
+  line-height: 1.12; color: #1e1a12;
+}
+.ss .ss-pull blockquote em { font-style: italic; color: #c0392b; }
+.ss .ss-pull p { max-width: 640px; margin: 0 auto; }
+
+/* --- Craft split (Italy) --------------------------------- */
+.ss-craft {
+  display: grid; grid-template-columns: 1.05fr .95fr; align-items: center;
+  gap: clamp(32px, 5vw, 72px); max-width: 1180px; margin: 0 auto;
+  padding: clamp(56px, 7vw, 96px) clamp(24px, 5vw, 72px) 0;
+}
+.ss-craft-img {
+  min-height: 500px;
+  background: url('images/quality-you-can-taste.png') center / cover no-repeat;
+  border: 3px solid var(--ink);
+  box-shadow: 12px 12px 0 var(--gold);
+}
+
+/* --- "That is the beginning" statement ------------------- */
+.ss-statement {
+  margin-top: clamp(56px, 7vw, 96px);
+  padding: clamp(64px, 8vw, 112px) 24px;
+  text-align: center; background: #faedd0;
+  border-top: 4px solid var(--gold); border-bottom: 4px solid var(--gold);
+}
+.ss-statement .ss-mark { margin: 0 auto 26px; width: 66px; height: 66px; }
+.ss .ss-statement h2 {
+  margin: 0 auto; max-width: 860px; font-size: clamp(34px, 4.8vw, 62px);
+  font-weight: 700; line-height: 1.12; color: #1e1a12;
+}
+.ss .ss-statement h2 em { display: block; font-style: italic; color: #c0392b; }
+
+/* --- Giving back band ------------------------------------ */
+.ss-give { background: var(--tomato); padding: clamp(56px, 7vw, 100px) clamp(24px, 5vw, 72px); }
+.ss-give-inner {
+  max-width: 1080px; margin: 0 auto; display: grid;
+  grid-template-columns: auto 1fr; align-items: center; gap: clamp(24px, 4vw, 60px);
+}
+.ss-give-num {
+  font-family: 'Playfair Display', Georgia, serif; font-weight: 700;
+  font-size: clamp(110px, 15vw, 200px); line-height: .82; color: #fff8ef;
+}
+.ss .ss-give h2 {
+  margin: 0 0 18px; font-size: clamp(26px, 3vw, 40px); font-weight: 700;
+  line-height: 1.25; color: #fff8ef;
+}
+.ss .ss-give p {
+  margin: 0; font-family: 'Playfair Display', Georgia, serif; font-style: italic;
+  font-size: clamp(19px, 1.8vw, 23px); color: rgba(255, 248, 239, .9);
+}
+
+/* --- Closing + signature --------------------------------- */
+.ss-close { max-width: 840px; margin: 0 auto; padding: clamp(64px, 8vw, 108px) 24px; text-align: center; }
+.ss .ss-close blockquote {
+  margin: 0 0 44px; font-size: clamp(23px, 2.7vw, 33px); font-style: italic;
+  font-weight: 400; line-height: 1.5; color: #1e1a12;
+}
+.ss-sig { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.ss-sig-name { font-family: 'Caveat', cursive; font-size: 54px; font-weight: 600; line-height: 1; color: #1e1a12; }
+.ss-sig-title {
+  font-family: Inter, sans-serif; font-size: 12px; font-weight: 700;
+  letter-spacing: .14em; text-transform: uppercase; color: #9a8f78;
+}
+
+/* --- Call to action -------------------------------------- */
+.ss-cta { background: var(--ink); text-align: center; padding: clamp(56px, 7vw, 96px) 24px; }
+.ss .ss-cta h2 { margin: 0 0 14px; font-size: clamp(32px, 4.2vw, 52px); font-weight: 700; line-height: 1.1; color: #fff8ef; }
+.ss .ss-cta p { max-width: 560px; margin: 0 auto 32px; color: rgba(255, 248, 239, .75); }
+.ss-cta .action-row { justify-content: center; margin-top: 0; }
+.ss-cta .button { box-shadow: 6px 6px 0 var(--gold); }
+
+/* --- Mobile ---------------------------------------------- */
+@media (max-width: 860px) {
+  .ss-intro, .ss-craft, .ss-give-inner { grid-template-columns: 1fr; }
+  .ss-intro-img { order: -1; min-height: 300px; }
+  .ss-craft-img { min-height: 320px; }
+  .ss-give-inner { text-align: center; }
+  .ss p { font-size: 17px; }
+}
